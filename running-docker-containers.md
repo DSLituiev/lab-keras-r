@@ -2,13 +2,13 @@
 ## Running docker containers
 We will be using docker containers to run our jobs.
 Containers are encapsulated virtual machines that can be run both locally and remotely.
-When working with deep learning, it is useful to be able to run jobs on machines that have graphic processing units(GPUs), which are most laptops don't have.
+When working with deep learning, it is useful to be able to run jobs on machines that have graphic processing units (GPUs), which are most laptops don't have.
 Therefore, we will be using cloud services to run our containers on GPU compute instances.
 
-Further we provide instructions for both running containers locally and remotely in the cloud.
+Further we provide instructions for running containers both locally and in the cloud.
 
 ### Glossary: 
-- container -- encaspulated compute environment 
+- [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- encaspulated operating-system-level virtual compute environment
 - image -- a snapshot of a container that can be stored and reused to provide reproducibility
 
 ### Running docker images locally
