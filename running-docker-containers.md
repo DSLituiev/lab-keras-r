@@ -1,40 +1,44 @@
-## Running docker containers
+## Introduction
 To train neural networks in R, we need to install a large amount of packages and software, including Keras, TensorFlow, Python, etc. To make setup easier, we have pre-installed these packages and software in a Docker container. 
+
 Containers are encapsulated virtual machines that can be run locally (i.e. on your laptop) or remotely (using cloud services or another machine such as UCSF's Wynton cluster).
+
 When working with deep learning, in order to speed up computation it is useful to run jobs on machines that have graphics processing units (GPUs), which most laptops don't have.
+
 So, Docker containers also allow you to easily switch between running jobs locally and remotely without having to reinstall the packages and software needed everytime you switch machines.
+
 Below we provide instructions to run Docker containers both locally and in the cloud using GPU compute instances.
 
 ### Glossary: 
-- [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- encaspulated operating-system-level virtual compute environment
-- image -- a snapshot of a container that can be stored and reused to provide reproducibility
+- image -- a snapshot of a container that can be stored, transferred, reused. 
+- [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
 
 ### Running docker images locally
 #### [SETUP] Sign up and download Docker desktop software:
 To be able to run Docker containers locally, you need to install Docker software on your computer.
 Go to [Docker website](https://www.docker.com/get-started) and scroll down and click on a white-on-blue text on the right side 'Download Docker and Take a Tutorial' then follow the instructions to download Docker Desktop software. 
-Note that there are minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). 
-We suggest trying to install Docker Desktop for Mac or Windows. If it turns out that your system does not fulfill Docker Desktop's minimum system requirements, then follow [these instructions]((https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy Docker software, instead. 
+
+Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac or Windows. If it turns out that your machine does not fulfill the requirements, then follow [these instructions]((https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
 
 #### [SETUP] Download a docker image to your local machine
 Open up a command-line terminal window:
 - If you installed Docker Desktop on Mac, open up the Terminal application ([see here for help](https://macpaw.com/how-to/use-terminal-on-mac) if you've never done this before).  
 - If you installed Docker Desktop on Windows, open up a terminal window (Command Prompt or PowerShell, but not PowerShell ISE; [see here for help](https://www.youtube.com/watch?v=YdDngaoD1WE) if you've never done this before).
-- If you installed Docker Toolbox on Mac, go to the Docker folder in applications and double click 'Docker Quickstart Terminal'.
-- If you installed Docker Toolbox on Windows, look for 'Docker Quickstart Terminal' in your Applications folder or Desktop.
+- If you installed Docker Toolbox on Mac/Windows, look for 'Docker Quickstart Terminal' in your Applications folder.
 
-In order to run a container locally, you'll need to download the image from dockerhub. The docker image is quite large (~6Gb), so make sure you have enough disk space and you are on a fast internet connection
+In order to run a container locally, you'll need to first download the image of the container from dockerhub. We have prepared this Docker image for you. It is quite large (~6Gb), so make sure you have enough disk space and you are on a fast internet connection before you run this command in your terminal:
 
     docker pull dslituiev/tensorflow-rstudio:latest
 
-#### [SETUP] Get your local machine's IP address
-
-docker is configured to use the default machine with IP 192.168.99.100
+#### [SETUP] Get your machine's IP address
+In your terminal, type ifconfig (if Mac) or ipconfig (if Windows) to get your machine's IP address. It should be in a similar format to 192.168.99.100
 
 #### Run a docker container locally
 In your terminal type:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
+
+#### Train 
 
 ### Running docker images in the cloud
 You will probably find running jobs locally in your laptop very slow. 
