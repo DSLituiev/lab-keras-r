@@ -13,7 +13,7 @@ Below we provide instructions to **run Docker containers both locally and in the
 - image -- a snapshot of a container that can be stored, transferred, reused. 
 - [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
 
-## Running docker images locally
+## Part 1: Running docker images locally
 ### [SETUP] Sign up and download Docker desktop software:
 To be able to run Docker containers locally, you need to install Docker software on your computer.
 Go to [Docker website](https://www.docker.com/get-started) and scroll down and click on a white-on-blue text on the right side 'Download Docker and Take a Tutorial' then follow the instructions to download Docker Desktop software. 
@@ -45,12 +45,11 @@ In a browser window (e.g. Chrome, Safari), type:
 
 replacing youripaddress with your machine's IP address. You should now be able to work with RStudio in your browser in pretty much the same way you would work with the Rstudio software in your machine. In this week's class, we will go over how to train a neural network in this docker container.
 
-## Running docker images in the cloud
+## Part 2: Running docker images in the cloud
 You will probably find running jobs locally in your laptop very slow. 
 For the purpose of this class, we have obtained some free cloud services credits from Neuromation so that you can try running the container on a remote machine with more compute power and memory than your laptop. 
 After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
-To send jobs to Neuromation, we need to install a job scheduling client. 
-The job scheduling client will allow us to run containers on a remote machine with more compute power and memory than your local machine.
+We need to install a job scheduling client to send jobs to run on Neuromation's machines. 
 
 ### [SETUP] Install neuromation platform client
 We'll be using conda virtual environment for our cloud job scheduling client.
