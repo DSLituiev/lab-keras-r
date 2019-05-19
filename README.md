@@ -2,7 +2,7 @@
 
 ## Setup instructions
 
-Please read the instructions in [this document](running-docker-containers.md) and **complete any instructions marked as "[SETUP]"** before class so that we can spend most of class time training neural networks (instead of doing setup). If you are stuck on any part of the setup instructions, don't hesitate to post on the [CLE forum](https://courses.ucsf.edu/mod/forum/view.php?id=546441).
+Please read the instructions in [this document](running-docker-containers.md) and **complete any instructions marked as "[SETUP]"** before class so that we can spend most of class time training neural networks (instead of doing setup). If you are stuck on any part of the   instructions, don't hesitate to post on the [CLE forum](https://courses.ucsf.edu/mod/forum/view.php?id=546441) -- if you are stuck, likely someone else in class is stuck too! 
 
 ## Lab
 
