@@ -16,9 +16,9 @@ Below we provide instructions to **run Docker containers both locally and in the
 ## Part 1: Running docker images locally
 ### [SETUP] Sign up and download Docker desktop software:
 To be able to run Docker containers locally, you need to install Docker software on your computer.
-Go to [Docker website](https://www.docker.com/get-started) and scroll down and click on a white-on-blue text on the right side 'Download Docker and Take a Tutorial' then follow the instructions to download Docker Desktop software. 
+Go to [Docker's website](https://www.docker.com/get-started), scroll down and click on the white-on-blue text on the right side 'Download Docker and Take a Tutorial', then follow the instructions to download Docker Desktop software. 
 
-Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac or Windows. If it turns out that your machine does not fulfill the requirements, then follow [these instructions]((https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
+Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac/Windows. If it turns out that your machine does not fulfill the requirements, then follow [these instructions](https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
 
 ### [SETUP] Download a docker image to your local machine
 Open up a command-line terminal window:
@@ -26,7 +26,7 @@ Open up a command-line terminal window:
 - If you installed Docker Desktop on Windows, open up a terminal window (Command Prompt or PowerShell, but not PowerShell ISE; [see here for help](https://www.youtube.com/watch?v=YdDngaoD1WE) if you've never done this before).
 - If you installed Docker Toolbox on Mac/Windows, look for 'Docker Quickstart Terminal' in your Applications folder.
 
-In order to run a container locally, you'll need to first download the image of the container from dockerhub. Run the following command in your terminal window to download the Docker image we have prepared for you. It is quite large (~6Gb), so make sure you have enough disk space and you are on a fast internet connection before you run the command:
+In order to run a container locally, you'll need to first download the image of the container from [Docker Hub](https://hub.docker.com/). Docker Hub has many interesting Docker images; we have also placed the Docker image we prepared for you there. Run the following command in your terminal window to download the image. It is quite large (~6Gb), so make sure you have enough disk space and you are on a fast internet connection before you run the command:
 
     docker pull dslituiev/tensorflow-rstudio:latest
 
