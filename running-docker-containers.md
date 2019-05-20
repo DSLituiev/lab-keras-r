@@ -8,9 +8,9 @@ Training neural nets is faster on machines with graphic processing units (GPUs),
 We will be training neural networks in Docker containers **both locally on your laptop and in the cloud using GPU compute instances**; for the purpose of this class, we have obtained some free cloud services credits from [Neuromation](https://neu.ro). After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
 
 ### Glossary: 
-- image -- a snapshot of a container that can be stored, transferred, reused. 
+- image -- a snapshot of a container that can be stored, transferred, reused.
 - [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
-- Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow.
+- Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow. Available as Python and R packages
 - [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google. Another popular open-source deep learning framework is [PyTorch](https://en.wikipedia.org/wiki/PyTorch), developed by Facebook. We will be using R's Keras package with TensorFlow as backend. See [here](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software) if you're interested in learning about other deep learning software.
 
 ## Part 1: Training neural networks locally
