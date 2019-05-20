@@ -10,6 +10,8 @@ We will be training neural networks in Docker containers **both locally on your 
 ### Glossary: 
 - image -- a snapshot of a container that can be stored, transferred, reused. 
 - [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
+- Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow.
+- [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google. Another popular open-source deep learning framework is [PyTorch](https://en.wikipedia.org/wiki/PyTorch), developed by Facebook. We will be using R's Keras package with TensorFlow as backend. See [here](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software) if you're interested in learning about other deep learning software.
 
 ## Part 1: Training neural networks locally
 ### [SETUP before 5/23] Install Docker desktop software:
