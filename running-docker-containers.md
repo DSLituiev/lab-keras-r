@@ -1,19 +1,17 @@
 # Introduction
-To train neural networks in R, we need to install a large amount of packages and software, including Keras, TensorFlow, Python, etc. To make setup easier, we have pre-installed these packages and software in a **Docker container**. 
+To train neural networks, we need to install a large amount of packages and software, including Keras, TensorFlow, etc. To make setup easier, we have pre-installed these packages and software in a **Docker container**. 
 
 Containers are encapsulated virtual machines that can be run locally (i.e. on your laptop) or remotely (using cloud services or another machine such as UCSF's Wynton cluster).
 
-When working with deep learning, in order to speed up computation it is useful to run jobs on machines that have graphics processing units (GPUs), which most laptops don't have.
+Training neural nets is faster on machines with graphic processing units (GPUs), which most laptops don't have. Another advantage of Docker containers is that they allow you to easily switch between different machines without reinstalling packages everytime. 
 
-So, Docker containers also allow you to easily switch between running jobs locally and remotely without having to reinstall the packages and software needed everytime you switch machines.
-
-Below we provide instructions to **run Docker containers both locally and in the cloud using GPU compute instances**.
+We will be training neural networks in Docker containers **both locally on your laptop and in the cloud using GPU compute instances**; for the purpose of this class, we have obtained some free cloud services credits from Neuromation. After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
 
 ### Glossary: 
 - image -- a snapshot of a container that can be stored, transferred, reused. 
 - [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
 
-## Part 1: Running docker images locally
+## Part 1: Training neural networks locally
 ### [SETUP] Sign up and download Docker desktop software:
 To be able to run Docker containers locally, you need to install Docker software on your computer.
 Go to [Docker's website](https://www.docker.com/get-started), scroll down and click on the white-on-blue text on the right side 'Download Docker and Take a Tutorial', then follow the instructions to download Docker Desktop software. 
@@ -45,13 +43,16 @@ In a browser window (e.g. Chrome, Safari), type:
 
 replacing youripaddress with your machine's IP address. You should now be able to work with RStudio in your browser in pretty much the same way you would work with the Rstudio software in your machine. In this week's class, we will go over how to train a neural network in this docker container.
 
-## Part 2: Running docker images in the cloud
-You will probably find running jobs locally in your laptop very slow. 
-For the purpose of this class, we have obtained some free cloud services credits from Neuromation so that you can try running the container on a remote machine with more compute power and memory than your laptop. 
-After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
-We need to install a job scheduling client to send jobs to run on Neuromation's machines. 
+## Part 2: Training neural networks in the cloud
+You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using Neuromation's GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
 
-### [SETUP] Install neuromation platform client
+### [SETUP] Install Neuromation job scheduling client
+Neuromation's job scheduling client requires Python 3.6 or above. First, check if you already have Python 3.6 or above installed. You can do so by typing the following in a terminal window:
+    python --version
+    
+If you do not have Python 3.6 or above installed, you can install that but we will encapsulate 
+
+
 We'll be using conda virtual environment for our cloud job scheduling client.
 Virtual environments serve a purpose similar to containers but are much much less resource consuming.
 First, we will create an environment, then activate it, and finally, install our job scheduling client there
