@@ -55,7 +55,7 @@ Type the following in a terminal window and make a note of what it returns (Pyth
 ### [SETUP before 5/30] Install conda Python 3.7
 We will install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. Here, we use a virtual environment to prevent this installation from interfering with your laptop's existing Python installation. 
 
-First, install conda on your laptop. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
+First, install conda on your laptop. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
 ### [SETUP before 5/30] Setup virtual environment
 Close your terminal window and open up a new one to allow the new Python installation to load. Create a new conda environment called 'neuromation' by typing the following into your terminal window:
