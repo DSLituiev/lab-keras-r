@@ -31,18 +31,25 @@ In order to run a container locally, you'll need to first download the image of 
     docker pull dslituiev/tensorflow-rstudio:latest
 
 ### Run a docker container locally
-In your terminal type:
+In your terminal window, type this command:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
 It will seem like it's not doing anything but it is actually running what you will see in your browser window in the next step.
 
 ### Interact with docker container
-In a browser window (e.g. Chrome, Safari), type:
+In a browser window (e.g. Chrome, Safari), type this command:
     
     http://0.0.0.0:8787 
 
 When prompted for a login and password, use `rstudio` for both. You should then see an Rstudio interface. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this. 
+
+### Stop docker container when done
+When you are done, stop the docker container using these instructions:
+- open up another terminal window and type `docker ps`
+- get the hash sequence of the first container in the displayed list
+- run `docker kill [hash sequence]`
+This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
 
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
@@ -58,11 +65,11 @@ We will install Neuromation's job scheduling client in a conda virtual environme
 First, install conda on your laptop. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
 ### [SETUP before 5/30] Setup virtual environment
-Close your terminal window and open up a new one to allow the new Python installation to load. Create a new conda environment called 'neuromation' by typing the following into your terminal window:
+Close your terminal window and open up a new one to allow the new Python installation to load. Create a new conda environment called 'neuromation' by typing this command in your terminal window:
 
         conda create --name neuromation python=3.7
         
-Then activate the environment by typing the following into your terminal window:
+Then activate the environment by typing this:
 
         conda activate neuromation || source activate neuromation
 
@@ -84,7 +91,7 @@ which should open up a browser window pointing to Neuromation. Create an account
 This time, you should see a success message like 'logged into https://staging.neu.ro/api/v1'.
 
 ### Run a docker container in the cloud
-Next, launch [the same Docker container as before](https://cloud.docker.com/repository/docker/dslituiev/tensorflow-rstudio/) by typing the following in your terminal window:
+Next, launch [the same Docker container as before](https://cloud.docker.com/repository/docker/dslituiev/tensorflow-rstudio/) by typing this command in your terminal window:
 
     neuro run dslituiev/tensorflow-rstudio:latest -c 4 -g 1 -m 16G --http 8787 
     
