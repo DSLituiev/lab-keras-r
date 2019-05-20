@@ -28,17 +28,6 @@ In order to run a container locally, you'll need to first download the image of 
 
     docker pull dslituiev/tensorflow-rstudio:latest
 
-### [SETUP before 5/23] Get your machine's IP address
-In your terminal, type 
-
-    ifconfig 
-
-if you have a Mac machine, or 
-
-    ipconfig 
-    
-if you have a Windows machine to get your machine's IP address. It should be in a similar format to 192.168.99.100
-
 ### Run a docker container locally
 In your terminal type:
 
@@ -47,9 +36,9 @@ In your terminal type:
 ### Interact with docker container
 In a browser window (e.g. Chrome, Safari), type:
     
-    http://youripaddress/8787 
+    http://0.0.0.0:8787 
 
-replacing youripaddress with your machine's IP address. You should now be able to work with RStudio in your browser in pretty much the same way you would work with the Rstudio software in your machine. In 5/23's structured discussion, we will go over how to train a neural network on your machine.
+You should now be able to work with RStudio in your browser in pretty much the same way you would work with the Rstudio software in your machine. In 5/23's structured discussion, we will go over how to train a neural network on your machine.
 
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
