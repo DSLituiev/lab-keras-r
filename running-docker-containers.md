@@ -29,7 +29,15 @@ In order to run a container locally, you'll need to first download the image of 
     docker pull dslituiev/tensorflow-rstudio:latest
 
 ### [SETUP before 5/23] Get your machine's IP address
-In your terminal, type ifconfig (if Mac) or ipconfig (if Windows) to get your machine's IP address. It should be in a similar format to 192.168.99.100
+In your terminal, type 
+
+    ifconfig 
+
+if you have a Mac machine, or 
+
+    ipconfig 
+    
+if you have a Windows machine to get your machine's IP address. It should be in a similar format to 192.168.99.100
 
 ### Run a docker container locally
 In your terminal type:
@@ -46,6 +54,11 @@ replacing youripaddress with your machine's IP address. You should now be able t
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
 
+### [SETUP before 5/23] Get information about your Python installation
+Type the following in a terminal window and make a note of what it returns (Python 2.x or Python 3.y). We will ask you about this in 5/23's structured discussion.
+    
+    python --version
+    
 ### [SETUP before 5/30] Install conda Python 3.7
 We will install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. Here, we use a virtual environment to prevent this installation from interfering with your existing Python installation. 
 
