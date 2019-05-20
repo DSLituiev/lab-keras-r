@@ -2,7 +2,7 @@
 
 ## Setup instructions
 
-Please read the instructions in [this document]:
+Please read the instructions in this document:
 
 [running-docker-containers.md](running-docker-containers.md)
 
