@@ -13,12 +13,12 @@ We will be training neural networks in Docker containers **both locally on your 
 
 ## Part 1: Training neural networks locally
 ### [SETUP before 5/23] Install Docker desktop software:
-To be able to run Docker containers locally, you need to install Docker software on your computer.
+To be able to run Docker containers locally, you need to install Docker software on your laptop.
 Go to [Docker's website](https://www.docker.com/get-started), scroll down and click on the white-on-blue text on the right side 'Download Docker and Take a Tutorial', then follow the instructions to download Docker Desktop software. 
 
-Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac/Windows. If it turns out that your machine does not fulfill the requirements, then follow [these instructions](https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
+Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac/Windows. If it turns out that your laptop does not fulfill the requirements, then follow [these instructions](https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
 
-### [SETUP before 5/23] Download a docker image to your local machine
+### [SETUP before 5/23] Download a docker image to your laptop
 Open up a command-line terminal window:
 - If you installed Docker Desktop on Mac, open up the Terminal application ([see here for help](https://macpaw.com/how-to/use-terminal-on-mac) if you've never done this before).  
 - If you installed Docker Desktop on Windows, open up a terminal window (Command Prompt or PowerShell, but not PowerShell ISE; [see here for help](https://www.youtube.com/watch?v=YdDngaoD1WE) if you've never done this before).
@@ -33,12 +33,14 @@ In your terminal type:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
+It will seem like it's not doing anything but it is actually running what you will see in your browser window in the next step.
+
 ### Interact with docker container
 In a browser window (e.g. Chrome, Safari), type:
     
     http://0.0.0.0:8787 
 
-You should now be able to work with RStudio in your browser in pretty much the same way you would work with the Rstudio software in your machine. In 5/23's structured discussion, we will go over how to train a neural network on your machine.
+When prompted for a login and password, use `rstudio` for both. You should then see an Rstudio interface. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this. 
 
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
@@ -49,9 +51,9 @@ Type the following in a terminal window and make a note of what it returns (Pyth
     python --version
     
 ### [SETUP before 5/30] Install conda Python 3.7
-We will install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. Here, we use a virtual environment to prevent this installation from interfering with your existing Python installation. 
+We will install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. Here, we use a virtual environment to prevent this installation from interfering with your laptop's existing Python installation. 
 
-First, install conda on your machine. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
+First, install conda on your laptop. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
 ### [SETUP before 5/30] Setup virtual environment
 Close your terminal window and open up a new one to allow the new Python installation to load. Create a new conda environment called 'neuromation' by typing the following into your terminal window:
@@ -93,4 +95,4 @@ In a browser window (e.g. Chrome, Safari), type in the URL:
     
     https://job-000000-0000-0000.jobs-staging.neu.ro
 
-replacing 000000-0000-0000 with what you see in the line. When prompted for a login and password, use `rstudio` for both. In 5/30's structured discussion, we will go over how to train a neural network in the cloud.
+replacing 000000-0000-0000 with what you see in the line. When prompted for a login and password, use `rstudio` for both. You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
