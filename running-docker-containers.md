@@ -47,11 +47,13 @@ replacing youripaddress with your machine's IP address. You should now be able t
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using Neuromation's GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
 
 ### [SETUP] Install Neuromation job scheduling client
-Neuromation's job scheduling client requires Python 3.6 or above. First, check if you already have Python 3.6 or above installed. You can do so by typing the following in a terminal window:
+Neuromation's job scheduling client requires Python 3.6 or above. First, check if you already have Python 3.6 or above installed. You can do so by typing the following in your terminal window:
+
     python --version
     
-If you do not have Python 3.6 or above installed, you can install that but we will encapsulate 
+If you do not have Python 3.6 or above installed, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html). 
 
+Now, install Neuromation's job scheduling client by typing the following in your terminal window:
 
 We'll be using conda virtual environment for our cloud job scheduling client.
 Virtual environments serve a purpose similar to containers but are much much less resource consuming.
