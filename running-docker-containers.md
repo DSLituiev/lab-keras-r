@@ -35,7 +35,7 @@ In your terminal window, type this command:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
-It will seem like it's not doing anything but it is actually running what you will see in your browser window in the next step.
+The terminal will become unresponsive and nothing will be printed out until you start run machine learning jobs. Just procede to the next step.
 
 ### Interact with docker container
 In a browser window (e.g. Chrome, Safari), type this command:
