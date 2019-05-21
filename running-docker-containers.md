@@ -52,7 +52,14 @@ In a browser window (e.g. Chrome, Safari), type this command:
     
     http://0.0.0.0:8787 
 
-When prompted for a login and password, use `rstudio` for both. You should then see an Rstudio interface. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this. 
+When on the login page, enter:
+
+- login: `rstudio` 
+- password:  `rstudio` 
+
+You should then see an Rstudio interface.
+
+In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup. 
 
 ### Stop docker container when done
 When you are done, stop the docker container using these instructions:
