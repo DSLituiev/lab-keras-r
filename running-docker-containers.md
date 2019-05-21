@@ -1,4 +1,5 @@
-# Introduction
+# Running docker containers locally and in the cloud
+## Introduction
 To train neural networks, we need to install a several crucial packages and software, including Rstudio, Keras, TensorFlow, etc. To make setup easier, we have pre-installed these packages and software within a **Docker container**. 
 
 Containers are encapsulated virtual machines that can be run locally (i.e. on your laptop) or remotely (using cloud services or another machine such as UCSF's Wynton cluster).
