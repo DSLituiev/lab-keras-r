@@ -46,7 +46,8 @@ In your terminal window, type this command:
 
 The terminal will become unresponsive and nothing will be printed out until you start run machine learning jobs. Just procede to the next step.
 
-_Advanced_ If you have an NVIDIA GPU machine, you might want to run your docker with GPU support. For this you will need [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker) installed. To enable GPU, include `--runtime=nvidia` flag:
+#### [Advanced] Run docker locally with GPU support
+If you have an NVIDIA GPU machine, you might want to run your docker with GPU support. For this you will need [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker) installed. To enable GPU, include `--runtime=nvidia` flag:
 
     docker run --runtime=nvidia -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
