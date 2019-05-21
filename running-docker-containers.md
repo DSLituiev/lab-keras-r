@@ -46,9 +46,11 @@ In your terminal window, type this command:
 
 The terminal will become unresponsive and nothing will be printed out until you start run machine learning jobs. Just procede to the next step.
 
-_Advanced_ If you have an NVIDIA GPU machine, you might want to run GPU 
+_Advanced_ If you have an NVIDIA GPU machine, you might want to run your docker with GPU support. For this you will need [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker) installed. To enable GPU, include `--runtime=nvidia` flag:
 
-### Interact with docker container
+    docker run --runtime=nvidia -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
+
+### Interact with Rstudio running within the docker container
 In a browser window (e.g. Chrome, Safari), type this command:
     
     http://0.0.0.0:8787 
@@ -117,7 +119,7 @@ The flag `-c 4 -g 1 -m 16G` indicates that a Neuromation instance with 1 GPU, 4 
 
 Wait for the instance to start. After it is done, look for a line like that looks like https://job-000000-0000-0000.jobs-staging.neu.ro.
 
-### Interact with docker container
+### Interact with Rstudio running within the docker container
 In a browser window (e.g. Chrome, Safari), paste the URL that was returned at the previous step, _something similar to_:
     
     https://job-000000-0000-0000.jobs-staging.neu.ro
