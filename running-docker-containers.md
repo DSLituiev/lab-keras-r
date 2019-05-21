@@ -68,8 +68,8 @@ In 5/23's structured discussion, we will go over how to train a neural network o
 ### Stop docker container when done
 When you are done, stop the docker container using these instructions:
 - open up another terminal window and type `docker ps`
-- get the hash sequence of the first container in the displayed list
-- run `docker kill [hash sequence]`
+- get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
+- run `docker stop [hash sequence]`
 This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
 
 ## Part 2: Training neural networks in the cloud
