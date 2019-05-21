@@ -1,5 +1,5 @@
 # Introduction
-To train neural networks, we need to install a large amount of packages and software, including Rstudio, Keras, TensorFlow, etc. To make setup easier, we have pre-installed these packages and software in a **Docker container**. 
+To train neural networks, we need to install a several crucial packages and software, including Rstudio, Keras, TensorFlow, etc. To make setup easier, we have pre-installed these packages and software within a **Docker container**. 
 
 Containers are encapsulated virtual machines that can be run locally (i.e. on your laptop) or remotely (using cloud services or another machine such as UCSF's Wynton cluster).
 
@@ -10,8 +10,16 @@ We will be training neural networks in Docker containers **both locally on your 
 ### Glossary: 
 - image -- a snapshot of a container that can be stored, transferred, reused.
 - [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
+
+- graphic processing unit (GPU) is a piece of hardware allowing for multiple computations of similar kind to be ran in parallel. Unlike CPU, it posesses one to several hundreds processing units that apply same instruction to multiple data at once. A typial single GPU unit is slower than a typical modern CPU unit, but multicore parallelization gives GPUs huge advantage in scientific computing tasks. 
+
 - Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow. Available as Python and R packages
-- [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google. Another popular open-source deep learning framework is [PyTorch](https://en.wikipedia.org/wiki/PyTorch), developed by Facebook. We have installed R's Keras package with TensorFlow as backend in the Docker container. See [here](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software) if you're interested in learning about other deep learning software.
+
+- [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google.
+
+- [PyTorch](https://en.wikipedia.org/wiki/PyTorch), an open source deep learning framework developed by Facebook (not used in this tutorial). 
+
+See [here](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software) if you're interested in learning about other deep learning software.
 
 ## Part 1: Training neural networks locally
 ### [SETUP before 5/23] Install Docker desktop software:
@@ -36,6 +44,8 @@ In your terminal window, type this command:
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
 The terminal will become unresponsive and nothing will be printed out until you start run machine learning jobs. Just procede to the next step.
+
+_Advanced_ If you have an NVIDIA GPU machine, you might want to run GPU 
 
 ### Interact with docker container
 In a browser window (e.g. Chrome, Safari), type this command:
@@ -95,13 +105,18 @@ Next, launch [the same Docker container as before](https://cloud.docker.com/repo
 
     neuro run dslituiev/tensorflow-rstudio:latest -c 4 -g 1 -m 16G --http 8787 
     
-The flag -c 4 -g 1 -m 16G indicates that a Neuromation instance with 1 GPU, 4 CPUs, and 16G of memory are requested. The flag --http 8787 is the port number. 
+The flag `-c 4 -g 1 -m 16G` indicates that a Neuromation instance with 1 GPU, 4 CPUs, and 16G of memory are requested. The flag --http 8787 is the port number. 
 
 Wait for the instance to start. After it is done, look for a line like that looks like https://job-000000-0000-0000.jobs-staging.neu.ro.
 
 ### Interact with docker container
-In a browser window (e.g. Chrome, Safari), type in the URL:
+In a browser window (e.g. Chrome, Safari), paste the URL that was returned at the previous step, _something similar to_:
     
     https://job-000000-0000-0000.jobs-staging.neu.ro
 
-replacing 000000-0000-0000 with what you see in the line. When prompted for a login and password, use `rstudio` for both. You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
+It will lead you to the rstudio log in page. If you see a neuromation logo, means your job is still loading. When on the login page, enter:
+
+- login: `rstudio` 
+- password:  `rstudio` 
+
+You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
