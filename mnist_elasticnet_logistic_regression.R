@@ -10,8 +10,8 @@ dim(x_train)
 
 ## display an image
 n = 100
-image <- x_train[n,] # array_reshape(x_train[n,], c(28,28))
-grid::grid.raster(image)
+image <- x_train[n,,] # array_reshape(x_train[n,], c(28,28))
+grid::grid.raster(image/255)
 
 
 # reshape
