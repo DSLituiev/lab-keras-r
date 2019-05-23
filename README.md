@@ -12,6 +12,8 @@ and **complete any instructions marked as "[SETUP before 5/23]"** before the str
 
 We are going to learn how to train two neural networks to classify good old MNIST handwritten digits dataset:
 
+- [mnist_elasticnet_logistic_regression.R](mnist_elasticnet_logistic_regression.R)
+
 - [mnist_fc.R](mnist_fc.R)
 
 - [mnist_conv.R](mnist_conv.R)
