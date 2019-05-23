@@ -58,7 +58,7 @@ First, install [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker). Then,
 ### Interact with Rstudio running within the docker container
 In a browser window (e.g. Chrome, Safari), type this command:
     
-    http://0.0.0.0:8787 
+    http://localhost:8787 
 
 When on the login page, enter:
 
