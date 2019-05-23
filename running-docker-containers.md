@@ -107,11 +107,11 @@ To login to Neuromation, type the following in your terminal window:
 
     neuro login
 
-which should open up a browser window pointing to Neuromation. Create an account and verify your email. After that, try logging in again by typing the same command in your terminal window:
+which should open up a browser window pointing to the Neuromation website. Create an account and verify your email. After that, try logging in again by typing the same command in your terminal window:
 
     neuro login
     
-This time, you should see a success message like 'logged into https://staging.neu.ro/api/v1'.
+This time, you should see a success message, something like 'logged into https://staging.neu.ro/api/v1'.
 
 ### Run a docker container in the cloud
 Next, launch [the same Docker container as before](https://cloud.docker.com/repository/docker/dslituiev/tensorflow-rstudio/) by typing this command in your terminal window:
