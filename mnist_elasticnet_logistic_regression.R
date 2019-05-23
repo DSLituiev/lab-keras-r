@@ -28,7 +28,7 @@ model <- keras_model_sequential()
 
 model %>% 
   layer_dense(units = 10, activation = 'softmax', input_shape = c(784),
-              kernel_regularizer=regularizer_l2())
+              kernel_regularizer=regularizer_l1_l2())
 
 summary(model)
 
