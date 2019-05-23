@@ -1,3 +1,6 @@
+#
+# from https://keras.rstudio.com/
+
 library(keras)
 mnist <- dataset_mnist()
 x_train <- mnist$train$x
