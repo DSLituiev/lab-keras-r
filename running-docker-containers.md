@@ -6,7 +6,7 @@ Containers are encapsulated virtual machines that can be run locally (i.e. on yo
 
 Training neural nets is faster on machines with graphic processing units (GPUs), which most laptops don't have. Another advantage of Docker containers is that they allow you to easily switch between different machines without reinstalling packages everytime. 
 
-We will be training neural networks in Docker containers **both locally on your laptop and in the cloud using GPU compute instances**; for the purpose of this class, we have obtained some free cloud services credits from [Neuromation](https://neu.ro). After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
+We will be training neural networks in Docker containers **both locally on your laptop and in the cloud using GPU compute instances**; for the purpose of this class, we have obtained some free cloud credits from [Neuromation](https://neu.ro). After this class, you may want to look into UCSF's Wynton cluster, GPU compute instances from Google Cloud or Amazon Web Services, etc.
 
 ### Glossary: 
 - image -- a snapshot of a container that can be stored, transferred, reused.
@@ -107,7 +107,9 @@ To login to Neuromation, type the following in your terminal window:
 
     neuro login
 
-which should open up a browser window pointing to the Neuromation website. Create an account and verify your email. After that, try logging in again by typing the same command in your terminal window:
+which should open up a browser window pointing to the Neuromation website. Create an account using your UCSF email and verify your email. Important note: you must use your UCSF email address to gain access to Neuromation's free cloud credits. 
+
+After that, try logging in again by typing the same command in your terminal window:
 
     neuro login
     
