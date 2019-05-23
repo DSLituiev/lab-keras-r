@@ -10,11 +10,11 @@ We will be training neural networks in Docker containers **both locally on your 
 
 ### Glossary: 
 - image -- a snapshot of a container that can be stored, transferred, reused.
-- [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment
+- [container](https://en.wikipedia.org/wiki/OS-level_virtualisation) -- a running instance of an image; an encaspulated computing environment.
 
 - graphic processing unit (GPU) is a piece of hardware allowing for multiple computations of similar kind to be ran in parallel. Unlike CPU, it posesses one to several hundreds processing units that apply same instruction to multiple data at once. A typial single GPU unit is slower than a typical modern CPU unit, but multicore parallelization gives GPUs huge advantage in scientific computing tasks. 
 
-- Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow. Available as Python and R packages
+- Keras -- a more user friendly interface to common deep learning frameworks, such as TensorFlow. Available as Python and R packages.
 
 - [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google.
 
