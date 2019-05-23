@@ -18,7 +18,7 @@ We will be training neural networks in Docker containers **both locally on your 
 
 - [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow) -- an open-source deep learning framework developed by Google.
 
-- [PyTorch](https://en.wikipedia.org/wiki/PyTorch), an open source deep learning framework developed by Facebook (not used in this tutorial). 
+- [PyTorch](https://en.wikipedia.org/wiki/PyTorch) -- an open source deep learning framework developed by Facebook (not used in this class). 
 
 See [here](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software) if you're interested in learning about other deep learning software.
 
@@ -28,6 +28,8 @@ To be able to run Docker containers locally, you need to install Docker software
 Go to [Docker's website](https://www.docker.com/get-started), scroll down and click on the white-on-blue text on the right side 'Download Docker and Take a Tutorial', then follow the instructions to download Docker Desktop software. 
 
 Note that Docker Desktop has minimum system requirements (e.g. it appears that for Mac, you should have OS 10.12 or above). We suggest first trying to install Docker Desktop for Mac/Windows. If it turns out that your laptop does not fulfill the requirements, then follow [these instructions](https://docs.docker.com/v17.12/toolbox/overview/) to install Docker Toolbox, a legacy software, instead. 
+
+Restart your laptop after installation.
 
 ### [SETUP before 5/23] Download a docker image to your laptop
 Open up a command-line terminal window:
@@ -44,10 +46,12 @@ In your terminal window, type this command:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
-The terminal will become unresponsive and nothing will be printed out until you start run machine learning jobs. Just procede to the next step.
+The terminal will become unresponsive and nothing will be printed out until you start doing something in Rstudio in your browser window (that will be opened up in the next step). Just proceed to the next step.
 
-#### [Advanced] Run docker locally with GPU support
-If you have an NVIDIA GPU machine, you might want to run your docker with GPU support. For this you will need [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker) installed. We will not work with this option in class, and provide it here solely for your information. To enable GPU, include `--runtime=nvidia` flag:
+#### [Advanced alternative to previous step] Run a docker container locally with GPU support
+If you happen to have an NVIDIA GPU and want to run your docker container on the GPU,  we provide info below on how you could do so. We will not do this option in class; this info is provided solely for your information.
+
+First, install [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker). Then, enable GPU by including the `--runtime=nvidia` flag:
 
     docker run --runtime=nvidia -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
@@ -61,9 +65,7 @@ When on the login page, enter:
 - login: `rstudio` 
 - password:  `rstudio` 
 
-You should then see an Rstudio interface.
-
-In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup. 
+You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
 
 ### Stop docker container when done
 When you are done, stop the docker container using these instructions:
@@ -130,4 +132,4 @@ It will lead you to the rstudio log in page. If you see a neuromation logo, mean
 - login: `rstudio` 
 - password:  `rstudio` 
 
-You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
+You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software on your laptop. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
