@@ -46,8 +46,6 @@ In your terminal window, type this command:
 
     docker run -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
-The terminal will become unresponsive and nothing will be printed out until you start doing something in Rstudio in your browser window (that will be opened up in the next step). Just proceed to the next step.
-
 #### [Advanced alternative to previous step] Run a docker container locally with GPU support
 If you happen to have an NVIDIA GPU and want to run your docker container on the GPU,  we provide info below on how you could do so. We will not do this option in class; this info is provided solely for your information.
 
@@ -68,29 +66,30 @@ When on the login page, enter:
 You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
 
 ### Stop docker container when done
-You must be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you are not back in your usual terminal window, and typing letter keys does not produce any reaction), it means you have the older container version, and you need to follow instructions below.
+You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you do not get back control in that terminal window, and typing letter keys does not produce any reaction), it means you have the older version of the Docker container, and you need to follow instructions below.
 
-#### Stopping instructions for the older container version
-- open up another terminal window and type `docker ps`
-- get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
-- run `docker stop [hash sequence]`
+#### Stopping instructions for older version of docker container
+- Open up another terminal window and type `docker ps`
+- Get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
+- Run `docker stop [hash sequence]`
 This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
 
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
 
-### [SETUP before 5/23] Get information about your Python installation
-Type the following in a terminal window and make a note of what it returns (Python 2.x or Python 3.y). We will ask you about this in 5/23's structured discussion.
-    
-    python --version
-    
 ### [SETUP before 5/30] Install conda Python 3.7
-We will install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. Here, we use a virtual environment to prevent this installation from interfering with your laptop's existing Python installation. 
+Neuromation needs Python 3.7, so we will install the [conda](https://docs.conda.io/en/latest/) bundle of Python 3.7. Note that you may already have already have Python installed on your laptop, but it is likely an older version of Python (Python 2) since Python 3.7 is quite new. 
 
-First, install conda on your laptop. Download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
+Conda is a package and environment manager that greatly streamlines installation and management of Python packages. If you have used Python before, you may have heard of the command `pip` to install packages. Conda basically replaces `pip`. 
+
+To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
+
+Close your terminal window and open up a new one to allow the new Python installation to load. 
 
 ### [SETUP before 5/30] Setup virtual environment
-Close your terminal window and open up a new one to allow the new Python installation to load. Create a new conda environment called 'neuromation' by typing this command in your terminal window:
+We will now install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. 
+
+Create a new conda environment called 'neuromation' by typing this command in your terminal window:
 
         conda create --name neuromation python=3.7
         
