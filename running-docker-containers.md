@@ -68,7 +68,9 @@ When on the login page, enter:
 You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
 
 ### Stop docker container when done
-When you are done, stop the docker container using these instructions:
+You must be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it, it means you have the older container version, and you need to follow instructions below.
+
+#### Stopping instructions for the older container version
 - open up another terminal window and type `docker ps`
 - get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
 - run `docker stop [hash sequence]`
