@@ -49,7 +49,7 @@ In your terminal window, type this command:
 #### [Advanced alternative to previous step] Run a docker container locally with GPU support
 If you happen to have an NVIDIA GPU and want to run your docker container on the GPU,  we provide info below on how you could do so. We will not do this option in class; this info is provided solely for your information.
 
-First, install [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker). Then, enable GPU by including the `--runtime=nvidia` flag:
+First, install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). Then, enable GPU by including the `--runtime=nvidia` flag:
 
     docker run --runtime=nvidia -p 8787:8787 -it dslituiev/tensorflow-rstudio:latest
 
@@ -78,9 +78,7 @@ This will stop the command running in the previous terminal window and the Rstud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
 
 ### [SETUP before 5/30] Install conda Python 3.7
-Neuromation needs Python 3.7, so we will install the [conda](https://docs.conda.io/en/latest/) bundle of Python 3.7. Note that you may already have already have Python installed on your laptop, but it is likely an older version of Python (Python 2) since Python 3.7 is quite new. 
-
-Conda is a package and environment manager that greatly streamlines installation and management of Python packages. If you have used Python before, you may have heard of the command `pip` to install packages. Conda basically replaces `pip`. 
+Neuromation needs Python 3.7. You may already have already have Python installed on your laptop, but it is likely an older version of Python (e.g. Python 2 or Python 3.6) since Python 3.7 is quite new. So we will install the [conda](https://docs.conda.io/en/latest/) bundle of Python 3.7. Conda is a package and environment manager that greatly streamlines installation and management of Python packages. 
 
 To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
 
@@ -130,9 +128,9 @@ In a browser window (e.g. Chrome, Safari), paste the URL that was returned at th
     
     https://job-000000-0000-0000.jobs-staging.neu.ro
 
-It will lead you to the rstudio log in page. If you see a neuromation logo, means your job is still loading. When on the login page, enter:
+It will lead you to the rstudio log in page. If you see the Neuromation logo, that means it's still loading. When on the login page, enter:
 
 - login: `rstudio` 
 - password:  `rstudio` 
 
-You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software on your laptop. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
+You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
