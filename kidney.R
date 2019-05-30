@@ -16,7 +16,7 @@ sess = k$get_session()
 sess$list_devices()
 ####################################
 
-setwd('~/src')
+setwd('~/lab-keras-r')
 source("simple_cnn.R")
 source("inception.R")
 
