@@ -110,7 +110,7 @@ To login to Neuromation, type the following in your terminal window:
 
     neuro login
 
-which should open up a browser window pointing to the Neuromation website. Create an account using your UCSF email (but not the same password) and verify your email. Important note: you must use your UCSF email address to gain access to Neuromation's free cloud credits. 
+which should open up a browser window pointing to the Neuromation website. Sign up for an account using your UCSF email (but not the same password) and verify your email. Important note: you must use your UCSF email address to gain access to Neuromation's free cloud credits. Note that it's not that we shared your UCSF credentials with Neuromation, we simply asked Neuromation to give anyone who signs up with a UCSF email access to some free cloud credits. 
 
 After that, try logging in again by typing the same command in your terminal window:
 
