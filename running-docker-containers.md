@@ -58,7 +58,9 @@ In a browser window (e.g. Chrome, Safari), type this command:
     
     http://localhost:8787 
 
-When on the login page, enter:
+Note that if you're using Docker Toolbox, `localhost` doesn't work. Instead use `http://192.168.99.100:8787`.
+
+You should see a login page. Enter:
 
 - login: `rstudio` 
 - password:  `rstudio` 
