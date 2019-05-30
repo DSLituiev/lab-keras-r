@@ -147,3 +147,8 @@ It will lead you to the rstudio log in page. If you see the Neuromation logo, th
 - password:  `rstudio` 
 
 You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
+
+### Removing Neuromation
+If you don't need Neuromation anymore after this class, you can easily remove it from your laptop by removing the conda environment in which it was installed. Type the following in your terminal window:
+
+    conda env remove --name neuromation
