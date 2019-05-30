@@ -80,9 +80,9 @@ You have probably found that training neural networks locally on your laptop is 
 ### [SETUP before 5/30] Install conda Python 3.7
 Neuromation needs Python 3.7. You may already have Python installed on your laptop, but it is likely an older version of Python (e.g. Python 2 or Python 3.6) since Python 3.7 is quite new. So we will install the [conda](https://docs.conda.io/en/latest/) bundle of Python 3.7. Conda is a package and environment manager that greatly streamlines installation and management of Python packages. 
 
-To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) then follow [these instructions for Mac](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html) or [these instructions for Windows](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html).
+To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) -- 64-bit (exe installer) for Windows, 64-bit (.pkg installer) for Mac and do the installation.
 
-Close your terminal window and open up a new one to allow the new Python installation to load. 
+Close your terminal window and open up a new one to allow the new Python installation to load. If when you type `conda` you don't get an error, you have succesfully completed this step.
 
 ### [SETUP before 5/30] Setup virtual environment
 We will now install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. 
@@ -100,13 +100,17 @@ Now, install Neuromation's job scheduling client in that environment:
 
         pip install -U neuromation
 
+If you get an error like 'gcc failed with exit status', your laptop doesn't have the C++ compiler needed to install neuromation, so install it by typing in your terminal window:
+
+        xcode-select --install
+
 ### [SETUP before 5/30] Get Neuromation account 
 
 To login to Neuromation, type the following in your terminal window:
 
     neuro login
 
-which should open up a browser window pointing to the Neuromation website. Create an account using your UCSF email and verify your email. Important note: you must use your UCSF email address to gain access to Neuromation's free cloud credits. 
+which should open up a browser window pointing to the Neuromation website. Create an account using your UCSF email (but not the same password) and verify your email. Important note: you must use your UCSF email address to gain access to Neuromation's free cloud credits. 
 
 After that, try logging in again by typing the same command in your terminal window:
 
