@@ -80,12 +80,12 @@ You have probably found that training neural networks locally on your laptop is 
 ### [SETUP before 5/30] Install conda Python 3.7
 Neuromation needs Python 3.7. You may already have Python installed on your laptop, but it is likely an older version of Python (e.g. Python 2 or Python 3.6) since Python 3.7 is quite new. So we will install the [conda](https://docs.conda.io/en/latest/) bundle of Python 3.7. Conda is a package and environment manager that greatly streamlines installation and management of Python packages. 
 
-To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) -- 64-bit (exe installer) for Windows, 64-bit (.pkg installer) for Mac and do the installation.
+To install conda on your laptop, download the Python 3.7 64-bit version from [here](https://docs.conda.io/en/latest/miniconda.html) -- 64-bit (exe installer) for Windows, 64-bit (.pkg installer) for Mac -- and do the installation.
 
-Close your terminal window and open up a new one to allow the new Python installation to load. If when you type `conda` you don't get an error, you have succesfully completed this step.
+Close your terminal window and open up a new one to allow the new Python installation to load. If when you type `conda` in your terminal window you don't get an error, you have installed conda Python 3.7 succesfully!
 
 ### [SETUP before 5/30] Setup virtual environment
-We will now install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. 
+We will now install Neuromation's job scheduling client in a conda virtual environment. Virtual environments serve a purpose similar to containers but are less resource consuming. We are installing Neuromation in its own environment to encapsulate it away from your other Python packages. A secondary benefit is that it is super easy to delete Neuromation after class when you don't need it anymore (by simply deleting the environment).
 
 Create a new conda environment called 'neuromation' by typing this command in your terminal window:
 
