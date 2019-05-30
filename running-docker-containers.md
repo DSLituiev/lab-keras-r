@@ -102,7 +102,7 @@ Now, install Neuromation's job scheduling client in that environment:
 
         pip install -U neuromation
 
-If you get an error like 'gcc failed with exit status', your laptop doesn't have the C++ compiler needed to install neuromation. If you are on a Mac, you can install it by typing in your terminal window:
+If you get an error like 'gcc failed with exit status', your laptop doesn't have the C++ compiler needed to install Neuromation. If you are on a Mac, you can install it by typing in your terminal window:
 
         xcode-select --install
 
