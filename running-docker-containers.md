@@ -60,12 +60,19 @@ In a browser window (e.g. Chrome, Safari), type this command:
 
 Note that if you're using Docker Toolbox, `localhost` doesn't work. Instead use `http://192.168.99.100:8787`.
 
-You should see a login page. Enter:
+You should see an Rstudio login page. Enter:
 
 - login: `rstudio` 
 - password:  `rstudio` 
 
-You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software. In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
+You should then see an Rstudio interface that you can interact with much like how you would interact with Rstudio software. 
+
+### Clone git repo
+Type the following into the Rstudio interface to download the R scripts [here](https://github.com/DSLituiev/lab-keras-r) for training neural networks.
+
+    git clone https://github.com/DSLituiev/lab-keras-r.git
+
+In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
 
 ### Stop docker container when done
 You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you do not get back control in that terminal window, and typing letter keys does not produce any reaction), it means you have the older version of the Docker container, and you need to follow instructions below.
@@ -134,7 +141,7 @@ In a browser window (e.g. Chrome, Safari), paste the URL that was returned at th
     
     https://job-000000-0000-0000.jobs-staging.neu.ro
 
-It will lead you to the rstudio log in page. If you see the Neuromation logo, that means it's still loading. When on the login page, enter:
+It will lead you to the rstudio log in page. If you see the Neuromation logo, that means it's still loading. Once an Rstudio login page pops up, enter:
 
 - login: `rstudio` 
 - password:  `rstudio` 
