@@ -148,6 +148,15 @@ It will lead you to the rstudio log in page. If you see the Neuromation logo, th
 
 You should then see an Rstudio interface. In 5/30's structured discussion, we will go over how to train a neural network in the cloud using this. 
 
+### Stop docker container when done
+You should be able to stop the container by pressing Ctrl+C while in the terminal window with your running docker container. You can double check that you stopped everything by following instructions below. 
+
+#### Stopping instructions for docker container
+- Open up another terminal window and type `neuro ps`
+- Get the ID of the first job in the displayed list (something like `job-d626dd302358`)
+- Run `neuro kill [job_ID]`
+This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
+
 ### Removing Neuromation
 If you don't need Neuromation anymore after this class, you can easily remove it from your laptop by removing the conda environment in which it was installed. Type the following in your terminal window:
 
