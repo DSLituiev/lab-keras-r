@@ -152,7 +152,7 @@ You should then see an Rstudio interface. In 5/30's structured discussion, we wi
 You should be able to stop the container by pressing Ctrl+C while in the terminal window with your running docker container. You can double check that you stopped everything by following instructions below. 
 
 #### Stopping instructions
-- Open up another terminal window and type `neuro ps`
+- In the same terminal window, after you did Ctrl-C as above, type `neuro ps`
 - Get the ID of the first job in the displayed list (something like `job-d626dd302358`)
 - Run `neuro kill [job_ID]`
 This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
