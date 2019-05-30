@@ -75,9 +75,9 @@ Type the following into the Rstudio interface to download the R scripts [here](h
 In 5/23's structured discussion, we will go over how to train a neural network on your laptop using this local setup.
 
 ### Stop docker container when done
-You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you do not get back control in that terminal window, and typing letter keys does not produce any reaction), it means you have the older version of the Docker container, and you need to follow instructions below.
+You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you do not get back control in that terminal window, and typing letter keys does not produce any reaction), it means you have the older version of the Docker container, and you need to follow instructions below. These instructions are also useful for double checking that you did stop everything. 
 
-#### Stopping instructions for older version of docker container
+#### Stopping instructions
 - Open up another terminal window and type `docker ps`
 - Get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
 - Run `docker stop [hash sequence]`
@@ -151,7 +151,7 @@ You should then see an Rstudio interface. In 5/30's structured discussion, we wi
 ### Stop docker container when done
 You should be able to stop the container by pressing Ctrl+C while in the terminal window with your running docker container. You can double check that you stopped everything by following instructions below. 
 
-#### Stopping instructions for docker container
+#### Stopping instructions
 - Open up another terminal window and type `neuro ps`
 - Get the ID of the first job in the displayed list (something like `job-d626dd302358`)
 - Run `neuro kill [job_ID]`
