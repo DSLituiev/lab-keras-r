@@ -78,10 +78,10 @@ We will be using `mnist_elasticnet_logistic_regression.R` (penalized logistic re
 You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If it does not stop it (you do not get back control in that terminal window, and typing letter keys does not produce any reaction), it means you have the older version of the Docker container, and you need to follow instructions below. These instructions are also useful for double checking that you did indeed stop everything. 
 
 #### Stopping instructions
-- Open up another terminal window and type `docker ps`
-- Get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
+- Open up another terminal window and type `docker ps`. If nothing is displayed, there is nothing to stop and you are all good.
+- If something is displayed, get the hash sequence of the first container in the displayed list (some [hexadecimal](http://mathworld.wolfram.com/Hexadecimal.html) sequence like `d626dd302358`)
 - Run `docker stop [hash sequence]`
-This will stop the command running in the previous terminal window and the Rstudio interface in the browser window.
+This will stop the command running in the previous terminal window and the Rstudio interface in the browser window. 
 
 ## Part 2: Training neural networks in the cloud
 You have probably found that training neural networks locally on your laptop is very slow. Now we will try to train neural networks in the cloud using [Neuromation](https://neu.ro)'s GPU compute instances. To do so, we need to install a job scheduling client to send jobs to Neuromation's machines. 
@@ -159,8 +159,8 @@ We will be using `mnist_elasticnet_logistic_regression.R` (penalized logistic re
 You should be able to stop the container by pressing `Ctrl+C` while in the terminal window with your running docker container. If you want to double check that you indeed stopped everything, follow the instructions below.
 
 #### Stopping instructions
-- In the same terminal window, after you did Ctrl-C as above, type `neuro ps`
-- Get the ID of the first job in the displayed list (something like `job-d626dd302358`)
+- In the same terminal window, after you did Ctrl-C as above, type `neuro ps`. If nothing is displayed, there is nothing to stop and you are all good.
+- If something is displayed, get the ID of the first job in the displayed list (something like `job-d626dd302358`)
 - Run `neuro kill [job_ID]`
 This will stop the Rstudio interface in the browser window.
 
